@@ -1,0 +1,47 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: smartdoc-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/smartdoc_ai?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+mybatis-plus:
+  configuration:
+    # ?????????? (? create_time ????? createTime)
+    map-underscore-to-camel-case: true
+    # ???????? SQL ?? (??????????)
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # ?????????
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+sa-token:
+  # token ?? (???? cookie ??)
+  token-name: satoken
+  # token ??? 24 ?? (??: ?)
+  timeout: 86400
+  # token ??
+  token-style: uuid
+  # ???????? banner
+  is-print: false
+# AI 大模型配置 (支持 DeepSeek / 阿里云百炼通义千问 / OpenAI 标准接口)
+llm:
+  api-url: https://api.deepseek.com/chat/completions
+  api-key: "sk-36100b3753d04f868e4c05ce60372682"
+  model: deepseek-chat
