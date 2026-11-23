@@ -1,0 +1,19 @@
+# 忽略 Maven 编译产物
+**/target/
+*.jar
+*.war
+
+# 忽略 Node.js 依赖包与打包目录
+**/node_modules/
+**/dist/
+
+# 忽略本地上传的临时文档目录
+uploads/
+
+# 忽略 IDE 与操作系统杂项文件
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
