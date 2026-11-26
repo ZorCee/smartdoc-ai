@@ -69,7 +69,7 @@ flowchart LR
 ```text
 smartdoc-ai/
 ├── smartdoc-server/                 # Spring Boot 3 后端工程 (Port: 8080)
-│   ├── src/main/java/com/zhaoce50/smartdocserver/
+│   ├── src/main/java/com/ZorCee/smartdocserver/
 │   │   ├── common/                  # 统一响应体 Result<T> 与全局异常处理器 GlobalExceptionHandler
 │   │   ├── config/                  # Sa-Token 权限拦截器配置
 │   │   ├── controller/              # RESTful 控制器 (Auth / KnowledgeBase / Document / Chat)

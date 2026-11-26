@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.zhaoce50</groupId>
+    <groupId>com.zorcee</groupId>
     <artifactId>smartdoc-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>smartdoc-server</name>
@@ -34,7 +34,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
-
+        <!-- Spring AOP 面向切面编程 (用于 @OperationLog 审计日志与性能监控) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
         <!-- MySQL 驱动 -->
         <dependency>
             <groupId>com.mysql</groupId>
@@ -67,7 +71,6 @@
             <artifactId>sa-token-spring-boot3-starter</artifactId>
             <version>${sa-token.version}</version>
         </dependency>
-
         <!-- 高性能 JSON 工具 FastJson2 -->
         <dependency>
             <groupId>com.alibaba.fastjson2</groupId>
